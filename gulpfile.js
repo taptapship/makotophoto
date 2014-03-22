@@ -33,7 +33,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
 
-  gulp.src('app/{views/}*.html')
+  gulp.src('app/{,views/}*.html')
     .pipe($.useref.assets())
     .pipe(jsFilter)
     .pipe($.ngmin())
@@ -94,10 +94,11 @@ gulp.task('wiredep', function () {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  gulp.src('app/{,views/}*.html')
     .pipe(wiredep({
       directory: 'app/bower_components',
-      ignorePath: 'app/'
+      ignorePath: 'app/',
+      exclude: ['bootstrap-sass']
     }))
     .pipe(gulp.dest('app'));
 });
