@@ -1,1 +1,1 @@
-console.log("'Allo 'Allo!");
+angular.module("makoto",["ui.router"]).config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){"use strict";$stateProvider.state("home",{url:"/",templateUrl:"views/index.html"}),$urlRouterProvider.otherwise("/")}]);
