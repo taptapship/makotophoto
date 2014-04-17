@@ -70,8 +70,14 @@ gulp.task('clean', function () {
   return gulp.src(['dist'], { read: false }).pipe($.clean());
 });
 
+// Copy
+gulp.task('copy', function () {
+  return gulp.src(['app/CNAME', 'app/robots.txt'])
+    .pipe(gulp.dest('dist'));
+});
+
 // Build
-gulp.task('build', ['styles', 'html', 'images']);
+gulp.task('build', ['copy', 'styles', 'html', 'images']);
 
 // Default task
 gulp.task('default', ['clean'], function () {
