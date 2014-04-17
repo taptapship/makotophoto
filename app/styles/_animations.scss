@@ -1,0 +1,11 @@
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+    filter: grayscale(100%);
+  }
+
+  50% {
+    opacity: .9;
+    filter: grayscale(70%) hue-rotate(55deg);
+  }
+}

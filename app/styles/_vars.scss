@@ -1,0 +1,28 @@
+$primary: #00496f;
+$accent: desaturate($primary, 80%);
+$gray: #ccc;
+
+.symbol {
+  font-family: "symbols";
+}
+
+.primary {
+  color: $primary;
+}
+.primary--bg {
+  background-color: $primary;
+}
+
+.accent {
+  color: $accent;
+}
+.accent--bg {
+  background-color: $accent;
+}
+
+.gray {
+  color: $gray;
+}
+.gray--bg {
+  background-color: $gray;
+}

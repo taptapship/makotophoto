@@ -4,19 +4,15 @@ $icon-font-path: "/bower_components/bootstrap-sass/vendor/assets/fonts/";
 @import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-$primary: #8da090;
-$accent: #333;
+// @import "animations";
+@import "fonts";
+@import "vars";
 
-@keyframes flash {
-  0%, 100% {
-    opacity: 1;
-    filter: grayscale(100%);
-  }
-
-  50% {
-    opacity: .9;
-    filter: grayscale(70%) hue-rotate(55deg);
-  }
+html,
+body {
+  height: 100%;
+  font-smoothing: antialiased;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .browsehappy {
@@ -26,38 +22,36 @@ $accent: #333;
   padding: 0.2em 0;
 }
 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('../images/gardens.jpg');
-  background-position: center center;
-  animation: flash 8s infinite;
-}
-
-.primary {
-  color: lighten($primary, 50%);
-}
-
-.accent {
-  color: lighten($primary, 10%);
-}
-
-.logo {
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-  font-family: 'Alex Brush', cursive;
+.banner {
+  display: table;
   text-align: center;
-  background: linear-gradient(to bottom, rgba($accent, .2), rgba($accent, .6));
+  width: 100%;
+  height: 100%;
+
+  > *:first-child {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .logo {
+    background: linear-gradient(to top, rgba(lighten($gray, 18%), .5), rgba(lighten($gray, 18%), .6));
+    font-family: "allura", cursive;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+  }
 
   h1 {
+    margin: 0;
     font-size: 5em;
 
     @media screen and (min-width: 768px) {
       font-size: 8em;
     }
+  }
+
+  .logo--extension {
+    padding: 8px;
+    background-color: lighten($gray, 15%);
+    border-bottom: 1px solid #ddd;
   }
 }

@@ -49,7 +49,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     .pipe(gulp.dest('dist'))
     .pipe($.size());
 
-  gulp.src('app/bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/*')
+  gulp.src(['app/bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/*', 'app/fonts/*'])
     .pipe(gulp.dest('dist/fonts'));
 });
 
@@ -67,7 +67,7 @@ gulp.task('images', function () {
 
 // Clean
 gulp.task('clean', function () {
-  return gulp.src(['dist/fonts', 'dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe($.clean());
+  return gulp.src(['dist'], { read: false }).pipe($.clean());
 });
 
 // Build
