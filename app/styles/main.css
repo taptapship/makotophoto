@@ -6291,6 +6291,7 @@ button.close {
 
 .accent--bg {
   background-color: #2c3b43;
+  color: #fff;
 }
 
 .gray {
@@ -6299,6 +6300,14 @@ button.close {
 
 .gray--bg {
   background-color: #cccccc;
+}
+
+.light-gray {
+  color: #f2f2f2;
+}
+
+.light-gray--bg {
+  background-color: #f2f2f2;
 }
 
 html,
@@ -6342,6 +6351,5 @@ body {
 }
 .banner .logo--extension {
   padding: 8px;
-  background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
 }

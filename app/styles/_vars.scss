@@ -18,6 +18,7 @@ $gray: #ccc;
 }
 .accent--bg {
   background-color: $accent;
+  color: #fff;
 }
 
 .gray {
@@ -25,4 +26,11 @@ $gray: #ccc;
 }
 .gray--bg {
   background-color: $gray;
+}
+
+.light-gray {
+  color: lighten($gray, 15%);
+}
+.light-gray--bg {
+  background-color: lighten($gray, 15%);
 }
